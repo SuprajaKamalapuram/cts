@@ -24,7 +24,7 @@ public static void main(String[] args) {
 		
 		try {			
 			session.beginTransaction();
-			int theId = 1;
+			//int theId = 1;
 			
 			Album tempAlbum =new Album("album1",LocalDate.now());
 			MyImage image=new MyImage("https:??url1");

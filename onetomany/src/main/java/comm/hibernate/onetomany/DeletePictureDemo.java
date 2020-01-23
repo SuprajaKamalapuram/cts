@@ -18,16 +18,20 @@ public class DeletePictureDemo {
 								.buildSessionFactory();
 	Session session = factory.getCurrentSession();
 		try {			
-		session.beginTransaction();
-			int theId = 10;
-			Picture tempPicture = session.get(Picture.class, theId);
-		System.out.println("Deleting course: " + tempPicture);
+		//session.beginTransaction();
+			//int theId = 1;
+			session.getTransaction().begin();
+			Picture tempPicture = new Picture("suppu");
+					//session.get(Picture.class, theId);
+			
+			session.save(tempPicture);
+		System.out.println("Deleting picture: " + tempPicture);
 			session.delete(tempPicture);
 			session.getTransaction().commit();
 			System.out.println("Done!");
 		}
 		finally {
-			session.close();
+			//session.close();
 			factory.close();
 		}
 	}

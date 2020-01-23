@@ -24,9 +24,9 @@ public class DeleteMyImageDemo {
 			session.beginTransaction();
 
 		
-			int theId = 3;
-			MyImage tempMyImage = 
-					session.get(MyImage.class, theId);
+			//int theId = 3;
+			MyImage tempMyImage = new MyImage("https:??url1");
+					//session.get(MyImage.class, theId);
 			
 			
 			System.out.println("tempMyImage: " + tempMyImage);
@@ -55,7 +55,7 @@ public class DeleteMyImageDemo {
 		}
 		finally {
 			
-			session.close();
+			//session.close();
 			
 			factory.close();
 		}
