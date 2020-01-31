@@ -4,12 +4,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mycompany</groupId>
-  <artifactId>soccerlegaue</artifactId>
+  <groupId>comm.mycompany</groupId>
+  <artifactId>login</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>soccerlegaue Maven Webapp</name>
+  <name>login Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -27,6 +27,22 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.4.10.Final</version>
+</dependency>
+    <dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>5.4.10.Final</version>
+</dependency>
+    <dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-validator</artifactId>
+    <version>6.1.1.Final</version>
+</dependency>
+    
+     <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
     <version>4.0.1</version>
@@ -66,10 +82,11 @@
     <version>5.2.3.RELEASE</version>
 </dependency>
     
+  
   </dependencies>
 
   <build>
-    <finalName>soccerlegaue</finalName>
+    <finalName>login</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
