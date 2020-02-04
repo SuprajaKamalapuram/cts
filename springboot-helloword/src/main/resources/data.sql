@@ -1,0 +1,1 @@
+insert into Student(firstname,lastname,email) values('Suppu','khatri','suppu@gmail.com');
