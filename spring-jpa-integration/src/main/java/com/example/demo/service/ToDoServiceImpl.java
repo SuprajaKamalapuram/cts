@@ -39,4 +39,11 @@ public class ToDoServiceImpl implements ToDoService {
 		return todo;
 	}
 
+
+	@Override
+	public ToDo createToDo(ToDo todo) {
+		// TODO Auto-generated method stub
+		return todoDAO.save(todo);
+	}
+
 }

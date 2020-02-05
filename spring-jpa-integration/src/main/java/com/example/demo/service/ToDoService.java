@@ -9,4 +9,5 @@ public interface ToDoService {
    
 	public List<ToDo> getAllToDos();
 	public Optional<ToDo> getToDoById(Integer todoId);
+	public ToDo createToDo(ToDo todo);
 }
