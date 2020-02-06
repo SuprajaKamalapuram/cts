@@ -5,7 +5,4 @@ spring:
         url: jdbc:mysql://localhost:3306/hr
         username: root
         password: welcome
-  jpa:
-    hibernate:
-      ddl-auto: create
-    show-sql: true       
+     

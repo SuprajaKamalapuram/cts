@@ -5,10 +5,12 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -78,6 +80,25 @@ public class ToDoController {
 		return todoService.createToDo(todo);
 	}
 	
+	@PutMapping("/todos")
+	public ToDo updateToDo(@RequestBody ToDo todo)
 	
-	
+	{	
+		return todoService.createToDo(todo);
+	}
+	@DeleteMapping("/todos/{todoId}")
+	public void deleteById(@PathVariable Integer todoId)
+	{
+		todoService.deleteToDoById(todoId);
+	}
+	@DeleteMapping("/todos")
+	public void deleteAll()
+	{
+		todoService.deleteAll();
+	}
+	@GetMapping("/todos/findByToDoName/{todoName}")
+	public List<ToDo> findByToDoName(@PathVariable String todoName)
+	{
+		return todoService.findByToDoName(todoName);
+	}
 }
