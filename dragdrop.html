@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 300px;
+            height: 300px;
+            border: red solid 2px;
+        }
+        #img1{
+            width: 150px;
+            height: 100px;   
+        }
+    
+        
+    </style>
+</head>
+<body>
+    <div id="div1" ondrop="onDrop(event)" ondragover="allowDefault(event)">
+    
+
+    </div>
+    <img src="download.jfif"  id="img1" draggable="true" ondragstart="onDrag(event)"/>
+    <script>
+        function allowDefault(event){
+            event.preventDefault();
+        }
+        function onDrag(event){
+            event.dataTransfer.setData("data",event.target.id)
+
+        }
+        function onDrop(event){
+             var data=event.dataTransfer.getData("data");
+             event.target.appendChild(document.getElementById(data))
+        }
+    </script>
+</body>
+</html>
